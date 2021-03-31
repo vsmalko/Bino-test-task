@@ -1,3 +1,74 @@
+button {
+  color: #FFFFFF;
+}
 
+.hr_divider {
+  display: flex;
+  width: 80%;
+  background-color: #ef5350;
+}
+
+.line {
+  width: 30%;
+  height: 2px;
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  background: #ef5350;
+}
+
+.header--mobile {
+  background: #ef5350;
+}
+.header--large {
+  background: transparent;
+}
+
+.logo--mobile {
+  width: 30px;
+}
+.logo--large {
+  width: 30px;
+}
+
+.our_blog a {
+  color: #FFFFFF;
+  background-color: #ef5350;
+}
+
+.card__bottom {
+  background: #F4F5F9;
+}
+
+.card__circle {
+  height: 50px;
+  width: 50px;
+  color: #757575;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 white;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
 
 /*# sourceMappingURL=all.css.map */
