@@ -1,3 +1,131 @@
 // VARIABLES
 
 // Colors
+$primary: #ef5350;
+$font: #616161;
+$bg: #F4F5F9;
+$cards: #757575;
+$white: #FFFFFF;
+
+//MIXINS
+
+//Helpers
+
+@mixin show {
+  display: block;
+}
+
+@mixin hide {
+  display: none;
+}
+@mixin hideimp{
+  display: none !important;
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+// STYLES
+
+// Helpers
+
+// Main
+
+button {
+    color: $white;
+}
+
+.hr_divider{
+    display: flex;
+    width: 80%;
+    background-color: $primary;
+}
+
+.line{
+    width: 30%;
+    height: 2px;
+    background-color: $white;
+    border: none;
+}
+
+.circle{
+    height: 30px;
+    width: 30px;
+    background: $primary;
+}
+
+// Headers
+.header{
+&--mobile{
+    background: $primary;
+}
+ &--large{
+    background: transparent;
+}
+}
+.logo{
+    &--mobile{
+    width: 30px;
+    }
+    &--large{
+    width: 30px;
+    }
+}
+
+.banner{
+    &--mobile{
+
+    }
+     &--large{
+        
+    }
+}
+
+//Our Blog mobile
+
+.our_blog a{
+    color: $white;
+    background-color: $primary;
+}
+.card__bottom{
+    background: $bg;
+}
+.card__circle{
+    height: 50px;
+    width: 50px;
+    color: $cards;
+    background: $white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+        transform: scale(1);
+        animation: pulse 2s infinite;
+}
+
+// Cards animation
+
+@keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+        }
+
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+        }
+
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+      }
