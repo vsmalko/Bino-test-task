@@ -1,7 +1,16 @@
+// Slider initialization
 $(document).ready(function () {
   $(".slider").slider();
 });
+// Dropdown initialization
+ $(".dropdown-trigger").dropdown();
+//  initialization
 
+  $(document).ready(function () {
+    $(".carousel").carousel();
+  });
+
+// Counter animation
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
   const step = (timestamp) => {
