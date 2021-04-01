@@ -33,7 +33,17 @@ $cards: #757575;
   display: flex;
   justify-content: center;
 }
-
+@mixin circle_anim {
+    height: 50px;
+    width: 50px;
+    color: $cards;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
 // STYLES
 
 // Helpers
@@ -59,10 +69,18 @@ button {
 }
 
 .line{
-    width: 30%;
-    height: 1px;
-    background-color: white;
-    border: none;
+    &__white{
+        background-color: white;
+        width: 30%;
+        height: 1px;
+        border: none;
+    }
+    &__grey{
+        background-color: $font;
+        width: 30%;
+        height: 1px;
+        border: none;
+    }
 }
 
 .circle{
@@ -85,7 +103,7 @@ button {
         }
     }
     &--large{
-        @include flex-row;
+        @include hide;
         background: transparent;
         position: absolute;
         z-index: 3;
@@ -107,14 +125,6 @@ button {
     }
 }
 
-@media screen and (min-width: 768px) {
-    .header--mobile{
-        @include hide;
-    }
-     .header--large{
-        @include flex-row;
-    }
-
 .logo{
     &--mobile{
         width: 100px;
@@ -123,15 +133,6 @@ button {
     &--large{
         width: 100px;
        margin: 0 5vw 0 5vw;
-    }
-}
-}
-@media screen and (min-width: 1028px) {
-    .logo--large{
-         margin: 0 20vw 0 10vw;
-    }
-    .header__item{
-        margin: 15px 20зx;
     }
 }
 
@@ -155,21 +156,38 @@ button {
 }
 
 .slider--large{
-    height: 550px !important;
+    height: 600px !important;
+    clip-path: polygon(100% 0%,100% 75%,50% 100%,0% 75%,0% 0%);
 }
 
 .slides--large{
-    height: 550px !important;
+    height: 600px !important;
+    clip-path: polygon(100% 0%,100% 75%,50% 100%,0% 75%,0% 0%);
 }
 
+.slider--small{
+    margin: 40px 0 0;
+    height: 400px !important;
+}
+
+.slides--small{
+     margin: 40px 0 0;
+     & a{
+         color: white;
+     }
+}
+
+.slider .indicators{
+    display: none !important;
+}
 
 .banner{
-    &--mobile{
-        @include flex-row;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
-    }
+    // &--mobile{
+    //     @include flex-row;
+    //     // justify-content: space-between;
+    //     // align-items: center;
+    //     // align-content: center;
+    // }
      &--large{
         @include hide;
     }
@@ -177,7 +195,6 @@ button {
         filter: brightness(30%);
     }
     &__content{
-        margin: 100px 0 0;
         z-index: 2;
         text-align: center;
         color: white;
@@ -187,6 +204,7 @@ button {
             font-weight: 700;
             letter-spacing: 5px;
             font-size: 36px;
+            text-align: center;
         }
     }
     &__subtitle{
@@ -196,7 +214,7 @@ button {
         background: $primary;
         border: none;
         box-shadow: $font;
-        margin: 0 15px 0;
+        margin: 20px 15px 0;
         &:hover,
          &:focus{
             background: $primary_darken;
@@ -215,36 +233,200 @@ button {
 .slider .slides li .caption p {
     color: white;
 }
+
+//Our Blog
+
+.our_blog {
+    & a{
+        color: white;
+        background-color: $primary;
+    }
+    &__icon{
+        @include circle_anim;
+        background: $bg;
+        padding: 15px 5px;
+        margin: -20px auto auto;
+    }
+    &--mobile{
+        @include flex-col;
+        text-align: center;
+        color: $font;
+    }
+    &--large{
+        @include hide;
+        text-align: center;
+        color: $font;
+    }
+    &__title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &__hr{
+        background: white;
+        width: 2px;
+        width: 20%;
+        margin: 0 0 auto 0;
+    }
+    &__text{
+        margin: 30px 0 30px;
+    }
+    &__link{
+        font-style: italic;
+    }
+    &__container{
+        @include flex-col;
+        color: white;
+        flex-wrap: wrap;
+        margin: 30px 0 0; 
+    }
+    &__4subcontainer{
+        @include flex-row;
+        flex-wrap: wrap;
+       
+    }
+    &__2subcontainer{
+        @include flex-row;
+    }
+    &__picture--left{
+        width: 25vw;
+        object-fit: cover;
+    }
+    &__picture--right{
+        width: 25vw;
+        object-fit: cover;
+    }
+    &__article--left{
+        text-align: left;
+        background: $primary;
+       padding: 30px;
+        width: 25vw;
+        & a{
+            color: white;
+        }
+    }
+     &__article--right{
+        text-align: left;
+        background: $primary;
+        padding: 30px;
+        width: 25vw;
+        & a{
+            color: white;
+        }
+    }
+    &__subtitle{
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+    // &__breadcrumbs{
+    //     margin: 0;
+    // }
+    &__text{
+        margin: 20px 0;
+        font-size: 14px;
+    }
+    }
+.fa-anchor:before{
+    padding: 0 12px;
+    color: $primary;
+}
+
+//Counter
+
+.counter{
+    background: url('../images/counterbg-s.jpg');
+    background-size: cover;
+    color: white;
+    &__styling_container{
+        @include flex-row;
+        flex-wrap: wrap;
+        backdrop-filter: blur(2px) brightness(60%);
+    }
+    &__item{
+        @include flex-col;
+        flex-wrap: nowrap;
+    }
+    &__circle{
+        border: solid 1 px white;
+    }
+    &__number{
+        font-weight: 700;
+        font-size: 24px;
+    }
+    // &__title{
+        
+    // }
+}
+
+// Cards
+
+.card{
+    &__bottom{
+    background: $bg;
+}
+
+&__circle{
+   @include circle_anim;
+    // height: 50px;
+    // width: 50px;
+}
+}
+
+// Media queries
 @media screen and (min-width: 728px) {
+    .header--large{
+        @include flex-row;
+    }
     .banner--mobile{
         @include hide;
     }
      .banner--large{
         @include flex-row;
     }
+    .banner__content{
+        margin: 100px 0 0;
+    }
+    .banner__btn1{
+        margin: 0 15px 15px 0;
+    }
+     .header--mobile{
+        @include hide;
+    }
+     .header--large{
+        @include flex-row;
+    }
+    .our_blog--mobile{
+        @include hide;
+    }
+    .our_blog--large{
+        @include show;
+    }
+    .our_blog__article--right,
+    .our_blog__article--left,
+    .our_blog__picture--right,
+    .our_blog__picture--left{
+        width: 50vw;
+    }
 }
-
-//Our Blog mobile
-
-.our_blog a{
-    color: white;
-    background-color: $primary;
+@media screen and (min-width: 1028px) {
+    .logo--large{
+         margin: 0 20vw 0 10vw;
+    }
+    .header__item{
+        margin: 15px 20зx;
+    }
+    .our_blog__4subcontainer{
+     flex-wrap: nowrap;
 }
-.card__bottom{
-    background: $bg;
 }
-.card__circle{
-    height: 50px;
-    width: 50px;
-    color: $cards;
-    background: white;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0 rgb(255, 255, 255);
-        transform: scale(1);
-        animation: pulse 2s infinite;
+@media screen and (min-width: 1203px) {
+.our_blog__article--right,
+    .our_blog__article--left,
+    .our_blog__picture--right,
+    .our_blog__picture--left{
+        width: 25vw;
+    }
 }
-
 // Cards animation
 
 @keyframes pulse {
