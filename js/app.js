@@ -3,12 +3,17 @@ $(document).ready(function () {
   $(".slider").slider();
 });
 // Dropdown initialization
- $(".dropdown-trigger").dropdown();
-//  initialization
+$(".dropdown-trigger").dropdown();
 
-  $(document).ready(function () {
-    $(".carousel").carousel();
-  });
+// Carousel initialization
+$(document).ready(function () {
+  $(".carousel").carousel();
+});
+
+// Floating action button initialization
+$(document).ready(function () {
+  $(".fixed-action-btn").floatingActionButton();
+});
 
 // Counter animation
 function animateValue(obj, start, end, duration) {
