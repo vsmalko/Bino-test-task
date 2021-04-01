@@ -7,6 +7,12 @@ $font: #616161;
 $bg: #F4F5F9;
 $cards: #757575;
 
+//Fonts
+$largest: 36px;
+$larger: 24px;
+$large: 17px;
+$small: 12px;
+
 //MIXINS
 
 //Helpers
@@ -34,8 +40,6 @@ $cards: #757575;
   justify-content: center;
 }
 @mixin circle_anim {
-    height: 50px;
-    width: 50px;
     color: $cards;
     background: white;
     border: none;
@@ -203,12 +207,12 @@ button {
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: 5px;
-            font-size: 36px;
+            font-size: $largest;
             text-align: center;
         }
     }
     &__subtitle{
-        font-size: larger;
+        font-size: $larger;
     }
     &__btn1{
         background: $primary;
@@ -243,6 +247,8 @@ button {
     }
     &__icon{
         @include circle_anim;
+         height: 50px;
+        width: 50px;
         background: $bg;
         padding: 15px 5px;
         margin: -20px auto auto;
@@ -258,7 +264,7 @@ button {
         color: $font;
     }
     &__title{
-        font-size: 24px;
+        font-size: $larger;
         font-weight: 700;
     }
     &__hr{
@@ -341,36 +347,178 @@ button {
         @include flex-row;
         flex-wrap: wrap;
         backdrop-filter: blur(2px) brightness(60%);
+        justify-content: space-around;
+        text-align: center;
+        padding: 30px 0;
     }
     &__item{
         @include flex-col;
         flex-wrap: nowrap;
+        
     }
     &__circle{
-        border: solid 1 px white;
+        & i{
+            font-size: 24px;
+            border: solid 1px white;
+            border-radius: 50%;
+            padding: 30px;
+        }
     }
     &__number{
         font-weight: 700;
         font-size: 24px;
+        padding: 10px 0 0;
     }
     // &__title{
         
     // }
 }
 
-// Cards
+// Pricing
+
+.pricing{
+    @include flex-col;
+    text-align: center;
+    justify-content: center;
+    &__title{
+        color: $font;
+        font-size: $larger;
+        font-weight: 700;
+    }
+    &__container{
+        @include flex-col;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        // width: 50vw;
+        padding: 30px 0 0;
+    }
+}
 
 .card{
+    margin: auto !important;
     &__bottom{
-    background: $bg;
+        background: $bg;
+        position: relative;
+        padding: 60px 0 20px !important;
+        & p{
+            margin: 0 30px 15px !important;
+        }
+    }
+    &__button{
+        border: none;
+        background: $cards;
+    }
+    &__container{
+        @include flex-col;
+        margin: auto !important;
+    }
+    &__circle{
+        @include circle_anim;
+        top: 40px;
+        z-index: 3;
+        height: 80px;
+        width: 80px;
+        margin: auto;
+        position: relative;
+
+    }
+    &__price{
+        font-weight: 600;
+        font-size: $larger;
+        margin: 0;
+        padding: 15px 0 0;
+    }
+    &__title{
+        font-weight: 600 !important;
+        letter-spacing: 3px;
+    }
+    &__subtitle{
+        margin: 0;
+        font-size: $small;
+    }
 }
 
-&__circle{
-   @include circle_anim;
-    // height: 50px;
-    // width: 50px;
+//Team
+
+.team{
+    &--mobile{
+        @include flex-col;
+        color: white;
+        background-color: $primary;
+        text-align: center;
+    }
+    &--large{
+        @include hide;
+        color: white;
+        text-align: center;
+        background: url('../images/teambg-l2.jpg');
+        background-size: cover; 
+    }
+    &__list{
+        @include flex-col;
+        margin: auto;
+    }
+    &__person{
+        @include flex-row;
+    }
+    &__photo{
+        border: 4px solid white;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        margin: 30px 40px;
+    }
+    &__text{
+        @include flex-col;
+        text-align: left;
+    }
+    &__name{
+        font-weight: 600;
+        font-size: $large;
+        margin: 60px 0 0;
+    }
+    // &__title{
+    //     color: ;
+    // }
 }
+
+//Form
+.form{
+    &--mobile{
+        @include flex-col;
+        background: $bg; 
+        text-align: center;
+         color: $font;
+    }
+    &--large{
+        @include hide;
+        background: $bg;
+        text-align: center;
+         color: $font;
+    }
+    &__container{
+        width: 70vw;
+        margin: 30px auto;
+    }
+    &__button{
+        background: $primary;
+        border: none;
+        margin: 30px 0;
+        &:hover,
+        &:focus{
+            background: $primary_darken;
+        }
+    }
+    &__title{
+       
+        font-size: $larger;
+        font-weight: 600;
+    }
 }
+
+//Footer
+
 
 // Media queries
 @media screen and (min-width: 728px) {
@@ -388,6 +536,9 @@ button {
     }
     .banner__btn1{
         margin: 0 15px 15px 0;
+    }
+    .banner__btn2{
+       display: none;
     }
      .header--mobile{
         @include hide;
@@ -407,7 +558,28 @@ button {
     .our_blog__picture--left{
         width: 50vw;
     }
+    .pricing__container{
+        @include flex-row;
+    }
+    .team--mobile{
+        @include hide;
+    }
+    .team--large{
+        @include flex-col;
+    }
+    .team__photo{
+        border: 2px solid $primary;
+        height: 60px;
+        width: 60px;
+    }
 }
+
+@media screen and (min-width: 870px){
+    .banner__btn2{
+        display: inline-block;
+    }
+}
+
 @media screen and (min-width: 1028px) {
     .logo--large{
          margin: 0 20vw 0 10vw;
