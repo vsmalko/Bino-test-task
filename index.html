@@ -276,7 +276,7 @@
     <!-- large screen our blog section starts -->
     <section class="our_blog--large">
         <div class="our_blog__icon"><i class="fas fa-anchor"></i></div>
-        <h2>OUR BLOG</h2>
+        <h2 class="our_blog__title">OUR BLOG</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div class="hr_divider">
             <hr class="line__grey">
@@ -419,7 +419,7 @@
 
     <!-- pricing starts -->
     <section class="pricing">
-        <h2>OUR PRICING</h2>
+        <h2 class="pricing__title">OUR PRICING</h2>
         <p>A 30 days free trial for all. A brief story about how this process works, keep an eye till the end.</p>
         <div class="hr_divider">
             <hr class="line__grey">
@@ -427,62 +427,70 @@
             <hr class="line__grey">
         </div>
         <div class="pricing__container">
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card grey darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title ">STARTER</span>
-                        </div>
-                        <div class="card__circle">
-                            <p class="card__price">$19</p>
-                            <p>per month</p>
-                        </div>
-                        <div class="card-content card__bottom grey-text text-darken-1">
-                            <p>Competition Analysis Methods</p>
-                            <p>All Ranked URLs</p>
-                            <p>International Support System</p>
-                            <p>Social Media Tracking</p>
-                    <button type="button">CHOOSE PLAN</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card red lighten-1">
-                        <div class="card-content white-text">
-                            <span class="card-title ">PREMIUM</span>
-                        </div>
-                        <div class="card__circle">
-                            <p class="card__price red-text text-lighten-1">$39</p>
-                            <p class="">per month</p>
-                        </div>
-                        <div class="card-content card__bottom grey-text text-darken-1">
-                            <p>Competition Analysis Methods</p>
-                            <p>All Ranked URLs</p>
-                            <p>International Support System</p>
-                            <p>Social Media Tracking</p>
-                            <button type="button" class="red lighten-1">CHOOSE PLAN</button>
+            <div class="container">
+                <div class="row valign-wrapper">
+                    <div class="col m8 offset-m2 s8 offset-s2 l10 offset-l1"> 
+                        <div class="card grey darken-1 card__width ">
+                            <div class="card-content white-text">
+                                <span class="card-title card__title">STARTER</span>
+                            </div>
+                            <div class="card__circle">
+                                <p class="card__price">$19</p>
+                                <p class="card__subtitle">per month</p>
+                            </div>
+                            <div class="card-content card__bottom grey-text text-darken-1">
+                                <p>Competition Analysis Methods</p>
+                                <p>All Ranked URLs</p>
+                                <p>International Support System</p>
+                                <p>Social Media Tracking</p>
+                                <button type="button" class="card__button">CHOOSE PLAN</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card grey darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title ">BUSINESS</span>
+
+            <div class="container">
+                <div class="row valign-wrapper">
+                    <div class="col m8 offset-m2 s8 offset-s2 l10 offset-l1">
+                        <div class="card red lighten-1 card__width">
+                            <div class="card-content white-text">
+                                <span class="card-title card__title">STARTER</span>
+                            </div>
+                            <div class="card__circle">
+                                <p class="card__price red-text text-lighten-1">$19</p>
+                                <p class="card__subtitle red-text text-lighten-1">per month</p>
+                            </div>
+                            <div class="card-content card__bottom grey-text text-darken-1">
+                                <p>Competition Analysis Methods</p>
+                                <p>All Ranked URLs</p>
+                                <p>International Support System</p>
+                                <p>Social Media Tracking</p>
+                                <button type="button" class="card__button red lighten-1">CHOOSE PLAN</button>
+                            </div>
                         </div>
-                        <div class="card__circle">
-                            <p class="card__price">$99</p>
-                            <p>per month</p>
-                        </div>
-                        <div class="card-content card__bottom grey-text text-darken-1">
-                            <p>Competition Analysis Methods</p>
-                            <p>All Ranked URLs</p>
-                            <p>International Support System</p>
-                            <p>Social Media Tracking</p>
-                            <button type="button">CHOOSE PLAN</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row valign-wrapper">
+                    <div class="col m8 offset-m2 s8 offset-s2 l10 offset-l1">
+                        <div class="card grey darken-1 card__width">
+                            <div class="card-content white-text">
+                                <span class="card-title card__title">BUSINESS</span>
+                            </div>
+                            <div class="card__circle">
+                                <p class="card__price">$99</p>
+                                <p class="card__subtitle">per month</p>
+                            </div>
+                            <div class="card-content card__bottom grey-text text-darken-1">
+                                <p>Competition Analysis Methods</p>
+                                <p>All Ranked URLs</p>
+                                <p>International Support System</p>
+                                <p>Social Media Tracking</p>
+                                <button type="button" class="card__button">CHOOSE PLAN</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -497,10 +505,42 @@
     <section class="team--mobile">
     <h2>OUR TEAM</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="hr_divider">
-            <hr class="line__white">
-            <div class="circle"></div>
-            <hr class="line__white">
+        <div class="team__list">
+            <div class="team__person">
+                <img src="images/teammate1.jpg" alt="Teammate 1 Karen Grey" class="team__photo">
+                <div class="team__text">
+                    <h3 class="team__name">Karen Grey</h3>
+                    <p class="team__title">Project Manager</p>
+                </div>
+            </div>
+            <div class="team__person">
+                <div class="team__text">
+                    <h3 class="team__name">Kazi Erfan</h3>
+                    <p class="team__title">UI/UX Designer</p>
+                </div>
+                <img src="images/teammate2.jpg" alt="Teammate 2 Kazi Erfan" class="team__photo">
+            </div>
+            <div class="team__person">
+                <img src="images/teammate3.jpg" alt="Teammate 3 John Doe" class="team__photo">
+                 <div class="team__text">
+                    <h3 class="team__name">John Doe</h3>
+                    <p class="team__title">Back-end Developer</p>
+                </div>
+            </div>
+            <div class="team__person">
+                <div class="team__text">
+                    <h3 class="team__name">Sarah Johnson</h3>
+                    <p class="team__title">Front-end Developer</p>
+                </div>
+                <img src="images/teammate4.jpg" alt="Teammate 4 Sarah Johnson" class="team__photo">
+            </div>
+            <div class="team__person">
+                <img src="images/teammate5.jpg" alt="Teammate 5 Alice Smith" class="team__photo">
+                <div class="team__text">
+                    <h3 class="team__name">Alice Smith</h3>
+                    <p class="team__title">Copywriter</p>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -514,38 +554,50 @@
             <div class="circle"></div>
             <hr class="line__white">
         </div>
-        <div class="team__mate">
-            <img src="images/teammate1.jpg" alt="Teammate 1 Karen Grey">
-            <p class="team__mate__name">Karen Grey</p>
-            <p class="team__mate__position">Project Manager</p>
-        </div>
-        <div class="team__mate">
-            <img src="images/teammate2.jpg" alt="Teammate 2 Kazi Erfan">
-            <p class="team__mate__name">Kazi Erfan</p>
-            <p class="team__mate__position">UI/UX Designer</p>
-        </div>
-        <div class="team__mate">
-            <img src="images/teammate3.jpg" alt="Teammate 3 John Doe">
-            <p class="team__mate__name">John Doe</p>
-            <p class="team__mate__position">Back-end Developer</p>
-        </div>
-        <div class="team__mate">
-            <img src="images/teammate4.jpg" alt="Teammate 4 Sarah Johnson">
-            <p class="team__mate__name">Sarah Johnson</p>
-            <p class="team__mate__position">Front-end Developer</p>
-        </div>
-        <div class="team__mate">
-            <img src="images/teammate5.jpg" alt="Teammate 5 Alice Smith">
-            <p class="team__mate__name">Alice Smith</p>
-            <p class="team__mate__position">Copywriter</p>
+        <div class="team__list">
+            <div class="team__person">
+                <img src="images/teammate1.jpg" alt="Teammate 1 Karen Grey" class="team__photo">
+                <div class="team__text">
+                    <h3 class="team__name">Karen Grey</h3>
+                    <p class="team__title">Project Manager</p>
+                </div>
+            </div>
+            <div class="team__person">
+                <div class="team__text">
+                    <h3 class="team__name">Kazi Erfan</h3>
+                    <p class="team__title">UI/UX Designer</p>
+                </div>
+                <img src="images/teammate2.jpg" alt="Teammate 2 Kazi Erfan" class="team__photo">
+            </div>
+            <div class="team__person">
+                <img src="images/teammate3.jpg" alt="Teammate 3 John Doe" class="team__photo">
+                <div class="team__text">
+                    <h3 class="team__name">John Doe</h3>
+                    <p class="team__title">Back-end Developer</p>
+                </div>
+            </div>
+            <div class="team__person">
+                <div class="team__text">
+                    <h3 class="team__name">Sarah Johnson</h3>
+                    <p class="team__title">Front-end Developer</p>
+                </div>
+                <img src="images/teammate4.jpg" alt="Teammate 4 Sarah Johnson" class="team__photo">
+            </div>
+            <div class="team__person">
+                <img src="images/teammate5.jpg" alt="Teammate 5 Alice Smith" class="team__photo">
+                <div class="team__text">
+                    <h3 class="team__name">Alice Smith</h3>
+                    <p class="team__title">Copywriter</p>
+                </div>
+            </div>
         </div>
     </section>
     <!-- large screen pricing ends -->
 
     <!-- mobile form starts  -->
     <section class="form--mobile">
-        <div class="form__title">
-            <h2>KEEP IN TOUCH</h2>
+        <div>
+            <h2 class="form__title">KEEP IN TOUCH</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <div class="hr_divider">
                 <hr class="line__grey">
@@ -553,8 +605,8 @@
                 <hr class="line__grey">
             </div>
         </div>
-        <div class="form">
-            <form action="" method="post">
+        <div class="form__container">
+            <form action="" method="get">
             <label for="fname">Name
                 <input type="text" id="fname" name="fname">
             </label>
@@ -567,7 +619,7 @@
             <label for="fmessage">Message
                 <textarea type="text" id="fmessage" name="fmessage"></textarea>
             </label>
-            <button type="submit">SEND MESSAGE</button>
+            <button type="submit" class="form__button">SEND MESSAGE</button>
             </form>
         </div>
     </section>
