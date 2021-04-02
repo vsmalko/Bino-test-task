@@ -6,6 +6,7 @@ $primary_darken:#e53935;
 $font: #616161;
 $bg: #F4F5F9;
 $cards: #757575;
+$footer: #212121;
 
 //Fonts
 $largest: 36px;
@@ -14,8 +15,6 @@ $large: 17px;
 $small: 12px;
 
 //MIXINS
-
-//Helpers
 
 @mixin show {
   display: block;
@@ -48,9 +47,16 @@ $small: 12px;
     transform: scale(1);
     animation: pulse 2s infinite;
 }
-// STYLES
 
-// Helpers
+//Fonts
+
+@mixin head2 {
+    font-size: $larger;
+    font-weight: 700;
+    letter-spacing: .2rem;;
+}
+
+// STYLES
 
 // Main
 
@@ -58,17 +64,17 @@ button {
     color: white;
     text-transform: uppercase;
     padding: 10px 30px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.61);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.61);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.61);
 }
 
 .hr_divider{
     display: flex;
     min-width: 20vw;
     max-width:25vw;
-    justify-content: center;
-    justify-self: center;
     align-items: center;
-    align-content: center;
-    align-self: center;
     margin: auto;
 }
 
@@ -238,6 +244,35 @@ button {
     color: white;
 }
 
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+    left: 10px;
+    z-index: 2;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: $primary;
+}
+
 //Our Blog
 
 .our_blog {
@@ -264,8 +299,7 @@ button {
         color: $font;
     }
     &__title{
-        font-size: $larger;
-        font-weight: 700;
+        @include head2;
     }
     &__hr{
         background: white;
@@ -288,24 +322,23 @@ button {
     &__4subcontainer{
         @include flex-row;
         flex-wrap: wrap;
-       
     }
     &__2subcontainer{
         @include flex-row;
     }
     &__picture--left{
-        width: 25vw;
+        width: calc(100vw / 4.05);
         object-fit: cover;
     }
     &__picture--right{
-        width: 25vw;
+        width: calc(100vw / 4.05);
         object-fit: cover;
     }
     &__article--left{
         text-align: left;
         background: $primary;
-       padding: 30px;
-        width: 25vw;
+        padding: 30px;
+        width: calc(100vw / 4.05);
         & a{
             color: white;
         }
@@ -314,7 +347,7 @@ button {
         text-align: left;
         background: $primary;
         padding: 30px;
-        width: 25vw;
+        width: calc(100vw / 4.05);
         & a{
             color: white;
         }
@@ -381,15 +414,13 @@ button {
     text-align: center;
     justify-content: center;
     &__title{
+        @include head2;
         color: $font;
-        font-size: $larger;
-        font-weight: 700;
     }
     &__container{
         @include flex-col;
         flex-wrap: nowrap;
         justify-content: space-between;
-        // width: 50vw;
         padding: 30px 0 0;
     }
 }
@@ -423,13 +454,13 @@ button {
 
     }
     &__price{
-        font-weight: 600;
+        font-weight: 700;
         font-size: $larger;
         margin: 0;
         padding: 15px 0 0;
     }
     &__title{
-        font-weight: 600 !important;
+        font-weight: 700 !important;
         letter-spacing: 3px;
     }
     &__subtitle{
@@ -446,13 +477,21 @@ button {
         color: white;
         background-color: $primary;
         text-align: center;
+        & .circle{
+            background: white;
+        }
     }
     &--large{
         @include hide;
         color: white;
         text-align: center;
         background: url('../images/teambg-l2.jpg');
-        background-size: cover; 
+        background-size: cover;
+        position: relative;
+
+    }
+    &__title{
+        @include head2;
     }
     &__list{
         @include flex-col;
@@ -466,21 +505,24 @@ button {
         border-radius: 50%;
         height: 150px;
         width: 150px;
-        object-fit: cover;
         margin: 30px 40px;
+        object-fit: cover;
     }
     &__text{
         @include flex-col;
         text-align: left;
+        &--large{
+            display: none;
+        }
     }
     &__name{
         font-weight: 600;
         font-size: $large;
         margin: 60px 0 0;
     }
-    // &__title{
-    //     color: ;
-    // }
+    &__hr{
+        margin: 30px auto 0;
+    }
 }
 
 //Form
@@ -489,37 +531,101 @@ button {
         @include flex-col;
         background: $bg; 
         text-align: center;
-         color: $font;
+        color: $font;
     }
     &--large{
         @include hide;
         background: $bg;
         text-align: center;
-         color: $font;
+        color: $font;
     }
     &__container{
         width: 70vw;
         margin: 30px auto;
+        background: white;
+        padding: 30px;
     }
     &__button{
         background: $primary;
         border: none;
-        margin: 30px 0;
+        margin: 30px 0 0;
         &:hover,
         &:focus{
             background: $primary_darken;
         }
     }
     &__title{
-       
-        font-size: $larger;
+        @include head2;
+    }
+    &__position{
+        font-size: $large;
+    }
+    &__input{
+        width: 85% !important;
+        margin: 0px 0px 10px 15px !important;
+    }
+    &__area{
+        width: 85% !important;
+        margin: 20px 0 0 10px;
+    }
+    // &__label{
+    
+    // }
+}
+
+//Button
+.action_button{
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+//Footer
+.contacts{
+    @include flex-col;
+    background: white;
+    color: $font;
+    line-height: 0.7;
+    padding: 0 0 30px;
+    &__title{
+        color: $primary;
+        font-size: $larger !important;
         font-weight: 600;
     }
 }
 
-//Footer
+.footer{
+     &--mobile{
+        @include flex-col;
+        background: $footer;
+        color: $font;
+        text-align: center;
+    }
+    &--large{
+        @include hide;
+        background: $footer;
+        color: $font;
+    }
+}
 
-
+.social{
+    @include flex-col;
+    justify-content: center;
+    text-align: center;
+    &__icons{
+        @include flex-row;
+        margin: auto;
+    }
+    & i {
+        font-size: $large;
+        padding: 20px 10px 0;
+        color: $font;
+        &:hover{
+            color: $primary;
+        }
+    }
+}
 // Media queries
 @media screen and (min-width: 728px) {
     .header--large{
@@ -566,11 +672,88 @@ button {
     }
     .team--large{
         @include flex-col;
+        height: 700px;
+    }
+    .team__text{
+        text-align: center;
     }
     .team__photo{
-        border: 2px solid $primary;
+        display: none;
+    }
+    .team__person{
+        border-radius: 50%;
         height: 60px;
         width: 60px;
+        border: 2px solid $primary;
+        position: absolute;
+        text-align: center;
+        &_1{
+            bottom: 250px;
+            left: 100px;
+            background: url("../images/teammate1.jpg");
+            background-size: cover;
+            &:hover{
+                background: linear-gradient(0deg, rgba(239, 83, 80, 0.5), rgba(239, 83, 80, 0.5)),
+                    url("../images/teammate1.jpg");
+                background-size: cover;
+            }
+        }
+        &_2{
+            bottom: 320px;
+            left: 300px;
+            background: url("../images/teammate2.jpg");
+            background-size: cover;
+            &:hover{
+                background: linear-gradient(0deg, rgba(239, 83, 80, 0.5), rgba(239, 83, 80, 0.5)),
+                    url("../images/teammate2.jpg");
+                background-size: cover;
+            }
+        }
+        &_3{
+            bottom: 280px;
+            left: 500px;
+            background: url("../images/teammate3.jpg");
+            background-size: cover;
+            &:hover{
+                background: linear-gradient(0deg, rgba(239, 83, 80, 0.5), rgba(239, 83, 80, 0.5)),
+                    url("../images/teammate3.jpg");
+                background-size: cover;
+            }
+        }
+        &_4{
+            bottom: 180px;
+            left: 700px;
+            background: url("../images/teammate4.jpg");
+            background-size: cover;
+            &:hover{
+                background: linear-gradient(0deg, rgba(239, 83, 80, 0.5), rgba(239, 83, 80, 0.5)),
+                    url("../images/teammate4.jpg");
+                background-size: cover;
+            }
+        }
+        &_5{
+            bottom: 150px;
+            left: 950px;
+            background: url("../images/teammate5.jpg");
+            background-size: cover;
+            &:hover{
+                background: linear-gradient(0deg, rgba(239, 83, 80, 0.5), rgba(239, 83, 80, 0.5)),
+                    url("../images/teammate5.jpg");
+                background-size: cover;
+            }
+        }
+    }
+    .form--mobile{
+        @include hide;
+    }
+    .form--large{
+        @include flex-row;
+    }
+    .footer--mobile{
+        @include hide;
+    }
+    .footer--large{
+        @include flex-row;
     }
 }
 
@@ -596,9 +779,16 @@ button {
     .our_blog__article--left,
     .our_blog__picture--right,
     .our_blog__picture--left{
-        width: 25vw;
+        width: calc(100vw / 4.05);
     }
 }
+
+//Helpers
+
+.show{
+    display: block;
+}
+
 // Cards animation
 
 @keyframes pulse {
