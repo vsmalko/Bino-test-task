@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://kit.fontawesome.com/86b430232a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/all.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <!-- mobile header starts -->
@@ -103,7 +105,7 @@
     <!-- mobile banner ends -->
 
     <!-- large-screen header and banner start -->
-    <header class="header--large" >
+    <header class="header--large" data-aos="fade-down">
         <a href="index.html"><img src="images/logo.svg" alt="Bino logo" class="logo--large"></a>
         <ul class="header__list">
             <li><a href="#" class="header__item">Home</a></li>
@@ -118,7 +120,8 @@
     <section class="banner--large">
         <div class="slider slider--large">
             <ul class="slides slides--large">
-                <li>
+                <li class="mySlides">
+                    <a class="prev">&#10094;</a>
                     <img src="images/banner1-l.jpg" class="banner__bg">
                     <div class="banner__content caption">
                         <p class="banner__subtitle">Our Clients Are Our First Priority</p>
@@ -134,8 +137,10 @@
                         <button type="button" class="banner__btn1">GET STARTED NOW</button>
                         <button type="button" class="banner__btn2">LEARN MORE</button>
                     </div>
+                    <a class="next" >&#10095;</a>
                 </li>
-                <li>
+                <li class="mySlides">
+                    <a class="prev">&#10094;</a>
                     <img src="images/banner2-l.jpg" class="banner__bg">
                     <div class="banner__content caption">
                         <p class="banner__subtitle">Our Clients Are Our First Priority</p>
@@ -151,8 +156,10 @@
                         <button type="button" class="banner__btn1">GET STARTED NOW</button>
                         <button type="button" class="banner__btn2">LEARN MORE</button>
                     </div>
+                    <a class="next" >&#10095;</a>
                 </li>
-                <li>
+                <li class="mySlides">
+                    <a class="prev">&#10094;</a>
                     <img src="images/banner3-l.jpg" class="banner__bg">
                     <div class="banner__content caption">
                         <p class="banner__subtitle">Our Clients Are Our First Priority</p>
@@ -168,8 +175,10 @@
                         <button type="button" class="banner__btn1">GET STARTED NOW</button>
                         <button type="button" class="banner__btn2">LEARN MORE</button>
                     </div>
+                    <a class="next" >&#10095;</a>
                 </li>
-                <li>
+                <li class="mySlides">
+                    <a class="prev">&#10094;</a>
                     <img src="images/banner4-l.jpg" class="banner__bg">
                     <div class="banner__content caption">
                         <p class="banner__subtitle ">Our Clients Are Our First Priority</p>
@@ -185,6 +194,7 @@
                         <button type="button" class="banner__btn1">GET STARTED NOW</button>
                         <button type="button" class="banner__btn2">LEARN MORE</button>
                     </div>
+                    <a class="next" >&#10095;</a>
                 </li>
             </ul>
         </div>
@@ -193,10 +203,10 @@
 
     <!-- mobile our blog section starts -->
     <section class="our_blog--mobile">
-        <div class="our_blog__icon"><i class="fas fa-anchor"></i></div>
-        <h2 class="our_blog__title">OUR BLOG</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="hr_divider">
+        <div class="our_blog__icon" data-aos="fade-down"><i class="fas fa-anchor"></i></div>
+        <h2 class="our_blog__title" data-aos="fade-down">OUR BLOG</h2>
+        <p data-aos="fade-down">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="hr_divider" data-aos="fade-down">
             <hr class="line__grey">
             <div class="circle"></div>
             <hr class="line__grey">
@@ -275,21 +285,20 @@
 
     <!-- large screen our blog section starts -->
     <section class="our_blog--large">
-        <div class="our_blog__icon"><i class="fas fa-anchor"></i></div>
-        <h2 class="our_blog__title">OUR BLOG</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="hr_divider">
-            <hr class="line__grey">
-            <div class="circle"></div>
-            <hr class="line__grey">
+        <div class="our_blog__icon" data-aos="fade-down"><i class="fas fa-anchor"></i></div>
+        <div data-aos="fade-down">
+            <h2 class="our_blog__title">OUR BLOG</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="hr_divider">
+                <hr class="line__grey">
+                <div class="circle"></div>
+                <hr class="line__grey">
+            </div>
         </div>
-
         <div class="our_blog__container">
-            <div class="our_blog__4subcontainer">
+            <div data-aos="fade-right" class="our_blog__4subcontainer">
                 <div class="our_blog__2subcontainer">
-
-                        <img src="images/item1-l.jpg" alt="Coffee cup, checks and bell on the table" class="our_blog__picture--left">
-
+                    <img src="images/item1-l.jpg" alt="Coffee cup, checks and bell on the table" class="our_blog__picture--left">
                     <article class="our_blog__article--right">
                         <div class="our_blog__breadcumbs">
                             <a href="#">art/</a>
@@ -326,10 +335,8 @@
                 
                 </div>
             </div>
-            <div class="our_blog__4subcontainer">
-
-                <div class="our_blog__2subcontainer">
-            
+            <div data-aos="fade-left" class="our_blog__4subcontainer">
+                <div  class="our_blog__2subcontainer">
                     <article class="our_blog__article--left">
                         <div class="our_blog__breadcumbs">
                             <a href="#">art/</a>
@@ -374,7 +381,7 @@
     <!-- counter starts -->
     <section class="counter">
         <div class="counter__styling_container">
-            <div class="counter__item">
+            <div data-aos="fade-up" class="counter__item">
                 <div class="counter__circle">
                     <i class="far fa-heart"></i>
                 </div>
@@ -382,7 +389,7 @@
                 <p class="counter__title">User Favorites</p>
             </div>
 
-            <div class="counter__item">
+            <div data-aos="fade-up" class="counter__item">
                 <div class="counter__circle">
                     <i class="fas fa-tag"></i>
                 </div>
@@ -390,7 +397,7 @@
                 <p class="counter__title">Total Posts</p>
             </div>
 
-            <div class="counter__item">
+            <div data-aos="fade-up" class="counter__item">
                 <div class="counter__circle">
                     <i class="far fa-thumbs-up"></i>
                 </div>
@@ -398,7 +405,7 @@
                 <p class="counter__title">Posts in Last 24 Hours</p>
             </div>
 
-            <div class="counter__item">
+            <div data-aos="fade-up" class="counter__item">
                 <div class="counter__circle">
                     <i class="far fa-star"></i>
                 </div>
@@ -406,7 +413,7 @@
                 <p class="counter__title">Campaigns</p>
             </div>
 
-            <div class="counter__item">
+            <div data-aos="fade-up" class="counter__item">
                 <div class="counter__circle">
                     <i class="far fa-bookmark"></i>
                 </div>
@@ -419,15 +426,17 @@
 
     <!-- pricing starts -->
     <section class="pricing">
-        <h2 class="pricing__title">OUR PRICING</h2>
-        <p>A 30 days free trial for all. A brief story about how this process works, keep an eye till the end.</p>
-        <div class="hr_divider">
-            <hr class="line__grey">
-            <div class="circle"></div>
-            <hr class="line__grey">
+        <div data-aos="fade-up">
+            <h2 class="pricing__title">OUR PRICING</h2>
+            <p>A 30 days free trial for all. A brief story about how this process works, keep an eye till the end.</p>
+            <div class="hr_divider">
+                <hr class="line__grey">
+                <div class="circle"></div>
+                <hr class="line__grey">
+            </div>
         </div>
         <div class="pricing__container">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <div class="row valign-wrapper">
                     <div class="col m8 offset-m2 s8 offset-s2 l10 offset-l1"> 
                         <div class="card grey darken-1 card__width ">
@@ -450,7 +459,7 @@
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container" data-aos="fade-up" data-aos-delay="300">
                 <div class="row valign-wrapper">
                     <div class="col m8 offset-m2 s8 offset-s2 l10 offset-l1">
                         <div class="card red lighten-1 card__width">
@@ -473,7 +482,7 @@
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container" data-aos="fade-up" data-aos-delay="600">
                 <div class="row valign-wrapper">
                     <div class="col m8 offset-m2 s8 offset-s2 l10 offset-l1">
                         <div class="card grey darken-1 card__width">
@@ -499,91 +508,45 @@
     </section>
     <!-- pricing ends -->
 
-    <!-- mobile pricing starts -->
-    <!-- mobile pricing ends -->
-
+    <!-- mobile our team starts -->
     <section class="team--mobile">
-    <h2>OUR TEAM</h2>
+    <h2 class="team__title">OUR TEAM</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="team__list">
-            <div class="team__person">
-                <img src="images/teammate1.jpg" alt="Teammate 1 Karen Grey" class="team__photo">
-                <div class="team__text">
-                    <h3 class="team__name">Karen Grey</h3>
-                    <p class="team__title">Project Manager</p>
-                </div>
-            </div>
-            <div class="team__person">
-                <div class="team__text">
-                    <h3 class="team__name">Kazi Erfan</h3>
-                    <p class="team__title">UI/UX Designer</p>
-                </div>
-                <img src="images/teammate2.jpg" alt="Teammate 2 Kazi Erfan" class="team__photo">
-            </div>
-            <div class="team__person">
-                <img src="images/teammate3.jpg" alt="Teammate 3 John Doe" class="team__photo">
-                 <div class="team__text">
-                    <h3 class="team__name">John Doe</h3>
-                    <p class="team__title">Back-end Developer</p>
-                </div>
-            </div>
-            <div class="team__person">
-                <div class="team__text">
-                    <h3 class="team__name">Sarah Johnson</h3>
-                    <p class="team__title">Front-end Developer</p>
-                </div>
-                <img src="images/teammate4.jpg" alt="Teammate 4 Sarah Johnson" class="team__photo">
-            </div>
-            <div class="team__person">
-                <img src="images/teammate5.jpg" alt="Teammate 5 Alice Smith" class="team__photo">
-                <div class="team__text">
-                    <h3 class="team__name">Alice Smith</h3>
-                    <p class="team__title">Copywriter</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- large screen pricing starts -->
-    <section class="team--large">
-    <h2>OUR TEAM</h2>
-        <p>Meet the craziest team. Share your thoughts with them.</p>
         <div class="hr_divider">
             <hr class="line__white">
             <div class="circle"></div>
             <hr class="line__white">
         </div>
         <div class="team__list">
-            <div class="team__person">
+            <div class="team__person" data-aos="fade-right">
                 <img src="images/teammate1.jpg" alt="Teammate 1 Karen Grey" class="team__photo">
                 <div class="team__text">
                     <h3 class="team__name">Karen Grey</h3>
                     <p class="team__title">Project Manager</p>
                 </div>
             </div>
-            <div class="team__person">
+            <div class="team__person" data-aos="fade-left">
                 <div class="team__text">
                     <h3 class="team__name">Kazi Erfan</h3>
                     <p class="team__title">UI/UX Designer</p>
                 </div>
                 <img src="images/teammate2.jpg" alt="Teammate 2 Kazi Erfan" class="team__photo">
             </div>
-            <div class="team__person">
+            <div class="team__person" data-aos="fade-right">
                 <img src="images/teammate3.jpg" alt="Teammate 3 John Doe" class="team__photo">
-                <div class="team__text">
+                 <div class="team__text">
                     <h3 class="team__name">John Doe</h3>
                     <p class="team__title">Back-end Developer</p>
                 </div>
             </div>
-            <div class="team__person">
+            <div class="team__person" data-aos="fade-left">
                 <div class="team__text">
                     <h3 class="team__name">Sarah Johnson</h3>
                     <p class="team__title">Front-end Developer</p>
                 </div>
                 <img src="images/teammate4.jpg" alt="Teammate 4 Sarah Johnson" class="team__photo">
             </div>
-            <div class="team__person">
+            <div class="team__person" data-aos="fade-right">
                 <img src="images/teammate5.jpg" alt="Teammate 5 Alice Smith" class="team__photo">
                 <div class="team__text">
                     <h3 class="team__name">Alice Smith</h3>
@@ -592,7 +555,56 @@
             </div>
         </div>
     </section>
-    <!-- large screen pricing ends -->
+    <!-- mobile our team ends -->
+
+    <!-- large screen our team starts -->
+    <section class="team--large">
+    <h2 class="team__title">OUR TEAM</h2>
+        <p>Meet the craziest team. Share your thoughts with them.</p>
+        <div class="hr_divider team__hr">
+            <hr class="line__white">
+            <div class="circle"></div>
+            <hr class="line__white">
+        </div>
+        <div class="team__list">
+            <div class="team__person team__person_1">
+                <img src="images/teammate1.jpg" alt="Teammate 1 Karen Grey" class="team__photo">
+                <div class="team__text--large" id="teamtext1">
+                    <h3 class="team__name">Karen Grey</h3>
+                    <p class="team__position">Project Manager</p>
+                </div>
+            </div>
+            <div class="team__person team__person_2">
+                <div class="team__text--large" id="teamtext2">
+                    <h3 class="team__name">Kazi Erfan</h3>
+                    <p class="team__position">UI/UX Designer</p>
+                </div>
+                <img src="images/teammate2.jpg" alt="Teammate 2 Kazi Erfan" class="team__photo">
+            </div>
+            <div class="team__person team__person_3">
+                <img src="images/teammate3.jpg" alt="Teammate 3 John Doe" class="team__photo">
+                <div class="team__text--large" id="teamtext3">
+                    <h3 class="team__name">John Doe</h3>
+                    <p class="team__position">Back-end Developer</p>
+                </div>
+            </div>
+            <div class="team__person team__person_4">
+                <div class="team__text--large" id="teamtext4">
+                    <h3 class="team__name">Sarah Johnson</h3>
+                    <p class="team__position">Front-end Developer</p>
+                </div>
+                <img src="images/teammate4.jpg" alt="Teammate 4 Sarah Johnson" class="team__photo">
+            </div>
+            <div class="team__person team__person_5">
+                <img src="images/teammate5.jpg" alt="Teammate 5 Alice Smith" class="team__photo">
+                <div class="team__text--large" id="teamtext5">
+                    <h3 class="team__name">Alice Smith</h3>
+                    <p class="team__position">Copywriter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- large screen our team ends -->
 
     <!-- mobile form starts  -->
     <section class="form--mobile">
@@ -607,17 +619,17 @@
         </div>
         <div class="form__container">
             <form action="" method="get">
-            <label for="fname">Name
-                <input type="text" id="fname" name="fname">
+            <label for="fname" class="form__label">Name
+                <input type="text" id="fname" name="fname" class="form__input">
             </label>
-            <label for="femail">Email
-                <input type="text" id="femail" name="femail">
+            <label for="femail" class="form__label">Email
+                <input type="text" id="femail" name="femail" class="form__input">
             </label>
-            <label for="fsubject">Subject
-                <input type="text" id="fsubject" name="fsubject">
+            <label for="fsubject" class="form__label">Subject
+                <input type="text" id="fsubject" name="fsubject" class="form__input">
             </label>
-            <label for="fmessage">Message
-                <textarea type="text" id="fmessage" name="fmessage"></textarea>
+            <label for="fmessage" class="form__label">Message
+                <textarea type="text" id="fmessage" name="fmessage" class="form__area"></textarea>
             </label>
             <button type="submit" class="form__button">SEND MESSAGE</button>
             </form>
@@ -659,24 +671,38 @@
 
     <!-- large screen form ends  -->
 
-    <!-- mobile footer starts  -->
+    <!-- mobile contacts and footer starts  -->
     <footer class="footer--mobile">
         <div class="contacts">
         <div class="contacts__group">
-            <h3>OUR ADDRESS</h3>
+            <h3 class="contacts__title">OUR ADDRESS</h3>
             <p>House #13, Streat road, Sydney</p>
             <p>2310 Australia</p>
         </div>
         <div class="contacts__group">
-            <h3>CALL US</h3>
+            <h3 class="contacts__title">CALL US</h3>
             <p>+ 880 168 109 1425</p>
             <p>+ 0216809142</p>
         </div>
         <div class="contacts__group">
-            <h3>EMAIL US</h3>
+            <h3 class="contacts__title">EMAIL US</h3>
             <p>contactus@email.com</p>
         </div>
     </div>
+    <div class="social">
+        <div class="social__icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-skype"></i>
+            <i class="fab fa-vimeo-v"></i>
+            <i class="fab fa-tumblr"></i>
+        </div>
+        <p>Kazi Efran &copy; All Rights Reserved</p>
+    </div>
+   
     </footer>
 
     <!-- mobile footer ends  -->
@@ -698,12 +724,13 @@
     <!-- large screen footer ends  -->
 
     <!-- floating action button starts -->
-    <a class="btn-floating btn-large red">
+    <a class="btn-floating btn-large red action_button">
         <i class="fas fa-chevron-up"></i>
     </a>
     <!-- floating action button ends -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/app.js"></script>
+   
 </body>
 </html>
