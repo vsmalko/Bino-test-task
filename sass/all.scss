@@ -1,6 +1,7 @@
 // VARIABLES
 
 // Colors
+
 $primary: #ef5350;
 $primary_darken:#e53935;
 $font: #616161;
@@ -9,6 +10,7 @@ $cards: #757575;
 $footer: #212121;
 
 //Fonts
+
 $largest: 36px;
 $larger: 24px;
 $large: 17px;
@@ -19,12 +21,8 @@ $small: 12px;
 @mixin show {
   display: block;
 }
-
 @mixin hide {
   display: none;
-}
-@mixin hideimp{
-  display: none !important;
 }
 @mixin flex-col {
   display: flex;
@@ -33,10 +31,6 @@ $small: 12px;
 @mixin flex-row {
   display: flex;
   flex-direction: row;
-}
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
 }
 @mixin circle_anim {
     color: $cards;
@@ -47,9 +41,6 @@ $small: 12px;
     transform: scale(1);
     animation: pulse 2s infinite;
 }
-
-//Fonts
-
 @mixin head2 {
     font-size: $larger;
     font-weight: 700;
@@ -100,6 +91,7 @@ button {
 }
 
 // Headers
+
 .header{
     &--mobile{
         @include flex-row;
@@ -192,12 +184,6 @@ button {
 }
 
 .banner{
-    // &--mobile{
-    //     @include flex-row;
-    //     // justify-content: space-between;
-    //     // align-items: center;
-    //     // align-content: center;
-    // }
      &--large{
         @include hide;
     }
@@ -259,7 +245,6 @@ button {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 10px;
   border-radius: 3px 0 0 3px;
@@ -268,7 +253,6 @@ button {
     left: 10px;
     z-index: 2;
 }
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: $primary;
 }
@@ -357,9 +341,6 @@ button {
         text-transform: uppercase;
         font-size: 24px;
     }
-    // &__breadcrumbs{
-    //     margin: 0;
-    // }
     &__text{
         margin: 20px 0;
         font-size: 14px;
@@ -402,9 +383,6 @@ button {
         font-size: 24px;
         padding: 10px 0 0;
     }
-    // &__title{
-        
-    // }
 }
 
 // Pricing
@@ -526,25 +504,44 @@ button {
 }
 
 //Form
+
 .form{
     &--mobile{
         @include flex-col;
         background: $bg; 
         text-align: center;
         color: $font;
+        &__container{
+            width: 70vw;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+        }
     }
     &--large{
         @include hide;
         background: $bg;
         text-align: center;
         color: $font;
+         &__container{
+            @include flex-row;
+            justify-content: center;
+            text-align: left;
+        }
+        &__titles{
+            display: block;
+        }
+        &__subcontainer{
+            @include flex-col;
+            background: white;
+            margin: 50px;
+            padding: 30px;
+        }
+        &__2subcontainer{
+            width: 50%;
+        }
     }
-    &__container{
-        width: 70vw;
-        margin: 30px auto;
-        background: white;
-        padding: 30px;
-    }
+    
     &__button{
         background: $primary;
         border: none;
@@ -568,20 +565,20 @@ button {
         width: 85% !important;
         margin: 20px 0 0 10px;
     }
-    // &__label{
-    
-    // }
 }
 
 //Button
+
 .action_button{
     display: none;
     position: fixed;
     bottom: 10px;
     right: 10px;
+    z-index: 4;
 }
 
 //Footer
+
 .contacts{
     @include flex-col;
     background: white;
@@ -607,11 +604,14 @@ button {
         background: $footer;
         color: $font;
     }
+    &__signature{
+        margin: auto 10% auto auto;
+    }
 }
 
 .social{
     @include flex-col;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     &__icons{
         @include flex-row;
@@ -626,7 +626,9 @@ button {
         }
     }
 }
+
 // Media queries
+
 @media screen and (min-width: 728px) {
     .header--large{
         @include flex-row;
@@ -662,7 +664,7 @@ button {
     .our_blog__article--left,
     .our_blog__picture--right,
     .our_blog__picture--left{
-        width: 50vw;
+        width: calc(100vw / 2.03);
     }
     .pricing__container{
         @include flex-row;
@@ -687,9 +689,10 @@ button {
         border: 2px solid $primary;
         position: absolute;
         text-align: center;
-        &_1{
+      
+         &_1{
             bottom: 250px;
-            left: 100px;
+            left: 10vw;
             background: url("../images/teammate1.jpg");
             background-size: cover;
             &:hover{
@@ -700,7 +703,7 @@ button {
         }
         &_2{
             bottom: 320px;
-            left: 300px;
+            left: 30vw;
             background: url("../images/teammate2.jpg");
             background-size: cover;
             &:hover{
@@ -711,7 +714,7 @@ button {
         }
         &_3{
             bottom: 280px;
-            left: 500px;
+            left: 50vw;
             background: url("../images/teammate3.jpg");
             background-size: cover;
             &:hover{
@@ -722,7 +725,7 @@ button {
         }
         &_4{
             bottom: 180px;
-            left: 700px;
+            left: 70vw;
             background: url("../images/teammate4.jpg");
             background-size: cover;
             &:hover{
@@ -733,7 +736,7 @@ button {
         }
         &_5{
             bottom: 150px;
-            left: 950px;
+            left: 90vw;
             background: url("../images/teammate5.jpg");
             background-size: cover;
             &:hover{
@@ -747,13 +750,21 @@ button {
         @include hide;
     }
     .form--large{
-        @include flex-row;
+        @include flex-col;
     }
+    
+    .form__input{
+        width: 95% !important;
+    }
+
     .footer--mobile{
         @include hide;
     }
     .footer--large{
         @include flex-row;
+    }
+    .footer__icons{
+        margin: auto auto auto 10%;
     }
 }
 
@@ -775,15 +786,30 @@ button {
 }
 }
 @media screen and (min-width: 1203px) {
-.our_blog__article--right,
+    .our_blog__article--right,
     .our_blog__article--left,
     .our_blog__picture--right,
     .our_blog__picture--left{
         width: calc(100vw / 4.05);
     }
+    .team__person_1{
+        left: 100px;
+    }
+    .team__person_2{
+        left: 300px;
+    }
+    .team__person_3{
+        left: 500px;
+    }
+    .team__person_4{
+        left: 700px;
+    }
+    .team__person_5{
+        left: 950px;
+    }
 }
 
-//Helpers
+// Helpers
 
 .show{
     display: block;
