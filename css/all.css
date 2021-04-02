@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Main */
 button {
   color: white;
   text-transform: uppercase;
@@ -36,6 +37,7 @@ button {
   background: #ef5350;
 }
 
+/* Headers */
 .header--mobile {
   display: flex;
   flex-direction: row;
@@ -184,7 +186,6 @@ button {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 10px;
   border-radius: 3px 0 0 3px;
@@ -195,11 +196,11 @@ button {
   z-index: 2;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: #ef5350;
 }
 
+/* Our Blog */
 .our_blog a {
   color: white;
   background-color: #ef5350;
@@ -303,6 +304,7 @@ button {
   color: #ef5350;
 }
 
+/* Counter */
 .counter {
   background: url("../images/counterbg-s.jpg");
   background-size: cover;
@@ -334,6 +336,7 @@ button {
   padding: 10px 0 0;
 }
 
+/* Pricing */
 .pricing {
   display: flex;
   flex-direction: column;
@@ -404,6 +407,7 @@ button {
   font-size: 12px;
 }
 
+/* Team */
 .team--mobile {
   display: flex;
   flex-direction: column;
@@ -461,6 +465,7 @@ button {
   margin: 30px auto 0;
 }
 
+/* Form */
 .form--mobile {
   display: flex;
   flex-direction: column;
@@ -468,17 +473,36 @@ button {
   text-align: center;
   color: #616161;
 }
+.form--mobile__container {
+  width: 70vw;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+}
 .form--large {
   display: none;
   background: #F4F5F9;
   text-align: center;
   color: #616161;
 }
-.form__container {
-  width: 70vw;
-  margin: 30px auto;
+.form--large__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+}
+.form--large__titles {
+  display: block;
+}
+.form--large__subcontainer {
+  display: flex;
+  flex-direction: column;
   background: white;
+  margin: 50px;
   padding: 30px;
+}
+.form--large__2subcontainer {
+  width: 50%;
 }
 .form__button {
   background: #ef5350;
@@ -505,13 +529,16 @@ button {
   margin: 20px 0 0 10px;
 }
 
+/* Button */
 .action_button {
   display: none;
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index: 4;
 }
 
+/* Footer */
 .contacts {
   display: flex;
   flex-direction: column;
@@ -538,11 +565,14 @@ button {
   background: #212121;
   color: #616161;
 }
+.footer__signature {
+  margin: auto 10% auto auto;
+}
 
 .social {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
 }
 .social__icons {
@@ -559,6 +589,7 @@ button {
   color: #ef5350;
 }
 
+/* Media queries */
 @media screen and (min-width: 728px) {
   .header--large {
     display: flex;
@@ -607,7 +638,7 @@ button {
 .our_blog__article--left,
 .our_blog__picture--right,
 .our_blog__picture--left {
-    width: 50vw;
+    width: calc(100vw / 2.03);
   }
 
   .pricing__container {
@@ -643,7 +674,7 @@ button {
   }
   .team__person_1 {
     bottom: 250px;
-    left: 100px;
+    left: 10vw;
     background: url("../images/teammate1.jpg");
     background-size: cover;
   }
@@ -653,7 +684,7 @@ button {
   }
   .team__person_2 {
     bottom: 320px;
-    left: 300px;
+    left: 30vw;
     background: url("../images/teammate2.jpg");
     background-size: cover;
   }
@@ -663,7 +694,7 @@ button {
   }
   .team__person_3 {
     bottom: 280px;
-    left: 500px;
+    left: 50vw;
     background: url("../images/teammate3.jpg");
     background-size: cover;
   }
@@ -673,7 +704,7 @@ button {
   }
   .team__person_4 {
     bottom: 180px;
-    left: 700px;
+    left: 70vw;
     background: url("../images/teammate4.jpg");
     background-size: cover;
   }
@@ -683,7 +714,7 @@ button {
   }
   .team__person_5 {
     bottom: 150px;
-    left: 950px;
+    left: 90vw;
     background: url("../images/teammate5.jpg");
     background-size: cover;
   }
@@ -698,7 +729,11 @@ button {
 
   .form--large {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  }
+
+  .form__input {
+    width: 95% !important;
   }
 
   .footer--mobile {
@@ -708,6 +743,10 @@ button {
   .footer--large {
     display: flex;
     flex-direction: row;
+  }
+
+  .footer__icons {
+    margin: auto auto auto 10%;
   }
 }
 @media screen and (min-width: 870px) {
@@ -735,11 +774,34 @@ button {
 .our_blog__picture--left {
     width: calc(100vw / 4.05);
   }
+
+  .team__person_1 {
+    left: 100px;
+  }
+
+  .team__person_2 {
+    left: 300px;
+  }
+
+  .team__person_3 {
+    left: 500px;
+  }
+
+  .team__person_4 {
+    left: 700px;
+  }
+
+  .team__person_5 {
+    left: 950px;
+  }
 }
+
+/* Helpers */
 .show {
   display: block;
 }
 
+/* Cards animation */
 @keyframes pulse {
   0% {
     transform: scale(0.95);
