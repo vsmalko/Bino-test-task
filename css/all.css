@@ -1,13 +1,17 @@
-@charset "UTF-8";
-/* Main */
+a,
+p {
+  font-size: 14px;
+}
+
 button {
   color: white;
+  font-size: 12px;
   text-transform: uppercase;
   padding: 10px 30px;
   border-radius: 2px;
-  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.61);
-  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.61);
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 0px 3px 3px #d4d4d4;
+  -moz-box-shadow: 0px 3px 3px #d4d4d4;
+  box-shadow: 0px 3px 3px #d4d4d4;
 }
 
 .hr_divider {
@@ -15,7 +19,7 @@ button {
   min-width: 20vw;
   max-width: 25vw;
   align-items: center;
-  margin: auto;
+  margin: 25px auto 0 auto;
 }
 
 .line__white {
@@ -32,12 +36,12 @@ button {
 }
 
 .circle {
-  height: 8px;
-  width: 8px;
+  height: 10px;
+  width: 10px;
   background: #ef5350;
+  margin: 0;
 }
 
-/* Headers */
 .header--mobile {
   display: flex;
   flex-direction: row;
@@ -55,6 +59,8 @@ button {
   background: transparent;
   position: absolute;
   z-index: 3;
+  padding: 30px 0;
+  width: 100vw;
 }
 .header__list {
   display: flex;
@@ -79,7 +85,7 @@ button {
 }
 .logo--large {
   width: 100px;
-  margin: 0 5vw 0 5vw;
+  margin: -8px 5vw 0 5vw;
 }
 
 .dropdown__btn {
@@ -143,17 +149,20 @@ button {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 5px;
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
+  line-height: 1.5;
 }
 .banner__subtitle {
-  font-size: 24px;
+  font-size: 17px;
 }
 .banner__btn1 {
   background: #ef5350;
   border: none;
-  box-shadow: #616161;
+  box-shadow: none;
   margin: 20px 15px 0;
+  width: 30vw;
+  padding: 15px 0 15px 5px;
 }
 .banner__btn1:hover, .banner__btn1:focus {
   background: #e53935;
@@ -161,6 +170,9 @@ button {
 .banner__btn2 {
   background: none;
   border: solid 1px white;
+  box-shadow: none;
+  width: 16vw;
+  padding: 13px 40px;
 }
 .banner__btn2:hover, .banner__btn2:focus {
   background: white;
@@ -169,6 +181,7 @@ button {
 
 .slider .slides li .caption p {
   color: white;
+  line-height: 1.5;
 }
 
 .prev, .next {
@@ -200,7 +213,6 @@ button {
   background-color: #ef5350;
 }
 
-/* Our Blog */
 .our_blog a {
   color: white;
   background-color: #ef5350;
@@ -237,12 +249,14 @@ button {
 }
 .our_blog__hr {
   background: white;
-  width: 2px;
-  width: 20%;
+  border: solid 2px;
+  width: 10%;
   margin: 0 0 auto 0;
 }
 .our_blog__text {
   margin: 30px 0 30px;
+  font-size: 12px;
+  line-height: 1.75;
 }
 .our_blog__link {
   font-style: italic;
@@ -252,7 +266,7 @@ button {
   flex-direction: column;
   color: white;
   flex-wrap: wrap;
-  margin: 30px 0 0;
+  margin: 55px 0 0;
 }
 .our_blog__4subcontainer {
   display: flex;
@@ -274,7 +288,7 @@ button {
 .our_blog__article--left {
   text-align: left;
   background: #ef5350;
-  padding: 30px;
+  padding: 30px 30px 50px 30px;
   width: calc(100vw / 4.05);
 }
 .our_blog__article--left a {
@@ -283,7 +297,7 @@ button {
 .our_blog__article--right {
   text-align: left;
   background: #ef5350;
-  padding: 30px;
+  padding: 30px 30px 50px 30px;
   width: calc(100vw / 4.05);
 }
 .our_blog__article--right a {
@@ -292,11 +306,20 @@ button {
 .our_blog__subtitle {
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 17px;
 }
-.our_blog__text {
-  margin: 20px 0;
-  font-size: 14px;
+.our_blog__breadcumbs {
+  position: relative;
+}
+.our_blog__triangle--l {
+  position: absolute;
+  top: 116px;
+  width: 61px;
+  left: -68px;
+}
+.our_blog__triangle--r {
+  position: absolute;
+  top: 116px;
 }
 
 .fa-anchor:before {
@@ -304,7 +327,6 @@ button {
   color: #ef5350;
 }
 
-/* Counter */
 .counter {
   background: url("../images/counterbg-s.jpg");
   background-size: cover;
@@ -317,7 +339,7 @@ button {
   backdrop-filter: blur(2px) brightness(60%);
   justify-content: space-around;
   text-align: center;
-  padding: 30px 0;
+  padding: 60px 0;
 }
 .counter__item {
   display: flex;
@@ -332,11 +354,16 @@ button {
 }
 .counter__number {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 17px;
+  letter-spacing: 0.1rem;
   padding: 10px 0 0;
 }
+.counter__title {
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  margin: 5px 0 0;
+}
 
-/* Pricing */
 .pricing {
   display: flex;
   flex-direction: column;
@@ -348,6 +375,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.2rem;
   color: #616161;
+  margin: 50px auto 0;
 }
 .pricing__container {
   display: flex;
@@ -367,10 +395,13 @@ button {
 }
 .card__bottom p {
   margin: 0 30px 15px !important;
+  font-size: 14px;
 }
 .card__button {
   border: none;
   background: #757575;
+  margin: 30px 0;
+  padding: 17px 30px;
 }
 .card__container {
   display: flex;
@@ -407,7 +438,6 @@ button {
   font-size: 12px;
 }
 
-/* Team */
 .team--mobile {
   display: flex;
   flex-direction: column;
@@ -465,13 +495,13 @@ button {
   margin: 30px auto 0;
 }
 
-/* Form */
 .form--mobile {
   display: flex;
   flex-direction: column;
   background: #F4F5F9;
   text-align: center;
   color: #616161;
+  padding: 0 0 40px;
 }
 .form--mobile__container {
   width: 70vw;
@@ -493,21 +523,31 @@ button {
 }
 .form--large__titles {
   display: block;
+  margin: 100px auto 0;
 }
 .form--large__subcontainer {
   display: flex;
   flex-direction: column;
   background: white;
   margin: 50px;
-  padding: 30px;
+  padding: 40px 50px 0 50px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 3px 3px #d4d4d4;
+  -moz-box-shadow: 0px 3px 3px #d4d4d4;
+  box-shadow: 0px 3px 3px #d4d4d4;
 }
 .form--large__2subcontainer {
   width: 50%;
 }
+.form--large__contacts {
+  color: #ef5350;
+  font-size: 17px;
+  font-weight: 600;
+}
 .form__button {
   background: #ef5350;
   border: none;
-  margin: 30px 0 0;
+  margin: 30px 0 70px;
 }
 .form__button:hover, .form__button:focus {
   background: #e53935;
@@ -516,9 +556,6 @@ button {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.2rem;
-}
-.form__position {
-  font-size: 17px;
 }
 .form__input {
   width: 85% !important;
@@ -529,7 +566,6 @@ button {
   margin: 20px 0 0 10px;
 }
 
-/* Button */
 .action_button {
   display: none;
   position: fixed;
@@ -538,12 +574,12 @@ button {
   z-index: 4;
 }
 
-/* Footer */
 .contacts {
   display: flex;
   flex-direction: column;
   background: white;
   color: #616161;
+  margin: -15px auto auto;
   line-height: 0.7;
   padding: 0 0 30px;
 }
@@ -551,6 +587,9 @@ button {
   color: #ef5350;
   font-size: 24px !important;
   font-weight: 600;
+}
+.contacts__group {
+  font-size: 14px;
 }
 
 .footer--mobile {
@@ -589,7 +628,6 @@ button {
   color: #ef5350;
 }
 
-/* Media queries */
 @media screen and (min-width: 728px) {
   .header--large {
     display: flex;
@@ -641,6 +679,10 @@ button {
     width: calc(100vw / 2.03);
   }
 
+  .counter__styling_container {
+    padding: 100px 150px;
+  }
+
   .pricing__container {
     display: flex;
     flex-direction: row;
@@ -662,6 +704,21 @@ button {
 
   .team__photo {
     display: none;
+  }
+
+  .team__name {
+    color: #ef5350;
+    margin: 100px 0 0;
+    letter-spacing: 0.1rem;
+  }
+
+  .team__position {
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+  }
+
+  .team__titles {
+    margin: 60px auto 0;
   }
 
   .team__person {
@@ -743,24 +800,42 @@ button {
   .footer--large {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    padding: 30px 0;
+    align-content: center;
+    align-items: center;
+  }
+
+  .footer__signature {
+    margin: auto 0;
+    font-size: 14px;
   }
 
   .footer__icons {
     margin: auto auto auto 10%;
   }
 }
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 1210px) {
+  .banner__btn1 {
+    padding: 15px 40px;
+    width: 16vw;
+  }
+
   .banner__btn2 {
     display: inline-block;
   }
+
+  .banner__content h1 {
+    font-size: 46px;
+  }
 }
-@media screen and (min-width: 1028px) {
+@media screen and (min-width: 1058px) {
   .logo--large {
     margin: 0 20vw 0 10vw;
   }
 
   .header__item {
-    margin: 15px 20зx;
+    margin: 15px 20px;
   }
 
   .our_blog__4subcontainer {
@@ -795,13 +870,10 @@ button {
     left: 950px;
   }
 }
-
-/* Helpers */
 .show {
   display: block;
 }
 
-/* Cards animation */
 @keyframes pulse {
   0% {
     transform: scale(0.95);
